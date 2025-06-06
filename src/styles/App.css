@@ -1,0 +1,82 @@
+body {
+  background-color: #000000; /* Updated body background */
+  color: white; /* Global text color */
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app-container {
+    background-image: radial-gradient(circle at 50% 62%, #004dc0, #3b5097 88%) !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0; /* Changed from 16px */
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  border: 2px solid #fb9c23;
+  border-radius: 10px;
+  
+
+  transform: translate(-50%, -50%); /* For centering with fixed position */
+  max-width: 960px; /* Added */
+  max-height: 540px; /* Added */
+  box-sizing: border-box;
+  /* Removed flex properties as display is now block */
+  /* gap: 20px; */ 
+  /* align-items: center; */
+}
+
+.bottom-panel {
+    background-color: #113d8c;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+  }
+    
+@media (max-width: 600px) {
+    .bottom-panel {
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+  }
+.canvas-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 960px;
+  }
+
+.win-message {
+  text-align: center;
+  margin-top: 16px;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #fff;
+  background-color: #2e4fa0; /* Default background */
+  min-height: 2em; /* Ensure it has some height even when empty before spin */
+  display: flex; /* For centering text vertically */
+  align-items: center; /* For centering text vertically */
+  justify-content: center; /* For centering text horizontally */
+}
+
+/* Specific styling for win/loss states can be added here if needed */
+
+  

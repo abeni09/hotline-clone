@@ -1,0 +1,28 @@
+.bet-amount-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #1f1f1f;
+    padding: 10px 16px;
+    border-radius: 8px;
+  }
+  
+  .bet-amount-controls button {
+    width: 32px;
+    height: 32px;
+    font-size: 20px;
+    color: white;
+    background: #333;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .amount-display {
+    min-width: 60px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+    color: #fff;
+  }
+  

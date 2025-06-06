@@ -1,0 +1,40 @@
+.bet-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Changed for potentially better spacing with padding */
+  width: 100%;
+  padding: 10px; /* Added padding */
+  border-radius: 12px; /* Increased border-radius */
+}
+
+.bet-buttons button {
+    border-radius: 20px;
+    height: 50px;
+    min-width: 85px;
+    max-width: 85px;
+    font-size: 13px;
+    padding: 0;
+    color: #fff;
+}
+
+.bet-buttons button:hover {
+  transform: scale(1.03) translateY(-1px); /* Refined hover effect */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4), inset 0 -1px 1px rgba(0,0,0,0.1);
+}
+
+.bet-buttons button:active {
+  transform: scale(0.98) translateY(1px); /* Added active state */
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.4);
+}
+
+.bet-buttons button:nth-child(2) {
+  background-image: radial-gradient(44% 44% at 49.36% 52%, #dba355 0%, #c4872e 100%);  
+}
+
+.bet-buttons button:nth-child(1) { /* Fire button */
+    background-image: radial-gradient(circle at 50% 50%, #ee0011, #b3000c 94%);  
+}
+
+.bet-buttons button:nth-child(3) { /* Black button */
+    background-image: radial-gradient(circle at 50% 50%, #191818, #000000 74%);  
+}

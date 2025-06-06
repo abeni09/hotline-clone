@@ -1,0 +1,15 @@
+.canvas-container {
+    background-color: #113d8c;
+    touch-action: none;
+    width: calc(100% - 10px);
+    height: 250px; /* or use a responsive value */
+    cursor: inherit;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+  

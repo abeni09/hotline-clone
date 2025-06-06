@@ -1,0 +1,14 @@
+/* src/styles/AppContainer.css */
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #1A233A; /* Slightly lighter than body for contrast */
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 600px; /* Adjust as needed for content */
+  margin-top: 20px; /* Give some space from top of viewport */
+}
