@@ -3,12 +3,12 @@ import CardCanvas from './components/CardCanvas/CardCanvas';
 import BetButtons from './components/BetButtons/BetButtons';
 import BetControls from './components/BetAmountControls/BetAmountControls';
 import ToggleSwitch from './components/ToggleSwitch/ToggleSwitch';
-import { GameProvider, useGameContext } from './components/GameContext';
+import { GameProvider } from './components/GameContext';
 import HistoryDropdown from './components/HistoryDropdown/HistoryDropdown';
 import './styles/App.css';
 
 const AppContent: React.FC = () => {
-  const { winAmount } = useGameContext();
+  // const { winAmount } = useGameContext();
 
   return (
     <div className="app-container">

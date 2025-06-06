@@ -24,9 +24,8 @@ export interface GameContextType {
 }
 
 const GameContext = createContext<GameContextType | undefined>(undefined);
-const generateCardSet = (count: number, rowIndex: number): CardType[] => {
+const generateCardSet = (count: number): CardType[] => {
   const cards: CardType[] = [];
-  const center = Math.floor(count / 2);
   const randomCenter = Math.floor(Math.random() * 13);
   let cardOrder = ['black', 'red'];
   
@@ -45,7 +44,7 @@ const generateCardSet = (count: number, rowIndex: number): CardType[] => {
 export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [betAmount, setBetAmount] = useState<number>(1);
   const [winAmount, setWinAmount] = useState<number | null>(null);
-  const [cardSet1, setCardSet1] = useState<CardType[]>(generateCardSet(13, 0));
+  const [cardSet1, setCardSet1] = useState<CardType[]>(generateCardSet(13));
   const [cardSet2, setCardSet2] = useState<CardType[] | null>(null);
   const [isAnimating, setIsAnimating] = useState(false);
   const [highlightWinner, setHighlightWinner] = useState(false);
@@ -79,7 +78,7 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
       const adjustedCount = cardCount % 2 === 0 ? cardCount - 1 : cardCount;
 
       if (hrm) {
-        setCardSet2(generateCardSet(adjustedCount, 1));
+        setCardSet2(generateCardSet(adjustedCount));
       } else {
         setCardSet2(null);
       }
@@ -96,8 +95,8 @@ const startSpin = useCallback((betType: CardType) => {
     const cardCount = window.innerWidth > 768 ? 13 : 9;
     const adjustedCount = cardCount % 2 === 0 ? cardCount - 1 : cardCount;
 
-    const newSet1 = generateCardSet(adjustedCount, 0);
-    const newSet2 = hrm ? generateCardSet(adjustedCount, 1) : null;
+    const newSet1 = generateCardSet(adjustedCount);
+    const newSet2 = hrm ? generateCardSet(adjustedCount) : null;
 
     // Reset states for the new spin
     setWinAmount(null);
